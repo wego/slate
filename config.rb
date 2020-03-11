@@ -1,5 +1,9 @@
+require 'mergedown'
+
 # Unique header generation
 require './lib/unique_head.rb'
+
+Mergedown.new('./docs', { mainfile: 'main.md', outfile: 'source/includes/_docs.md'})
 
 # Markdown
 set :markdown_engine, :redcarpet

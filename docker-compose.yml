@@ -1,0 +1,8 @@
+app:
+  build: .
+  ports:
+    - 4567:80
+  volumes:
+    - ./source:/usr/src/app/source
+    - ./build/:/usr/src/app/build
+    - ./source/docs:/usr/src/app/source/docs
