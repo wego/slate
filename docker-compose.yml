@@ -1,8 +1,22 @@
-app:
-  build: .
-  ports:
-    - 4567:80
-  volumes:
-    - ./source:/usr/src/app/source
-    - ./build/:/usr/src/app/build
-    - ./source/docs:/usr/src/app/source/docs
+version: '3.7'
+
+services:
+  app:
+    build:
+      context: .
+      target: application
+    ports:
+      - 4567:80
+    volumes:
+      - ./source:/usr/src/app/source
+      - ./build/:/usr/src/app/build
+      - ./source/docs:/usr/src/app/source/docs
+
+  uploader:
+    build:
+      context: .
+      target: uploader
+      args:
+        AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID}"
+        AWS_SECRET_ACCESS_KEY: "${AWS_SECRET_ACCESS_KEY}"
+
