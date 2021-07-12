@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/kates/mergedown.git
+  revision: 504f6458626c07d15b2632ebeb029b5a5ac32dfa
+  branch: master
+  specs:
+    mergedown (0.0.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -88,7 +95,7 @@ GEM
       activesupport (>= 3.1)
     parallel (1.17.0)
     public_suffix (3.1.0)
-    rack (2.0.7)
+    rack (2.2.3)
     rake (12.3.2)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
@@ -120,6 +127,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  mergedown!
   middleman (~> 4.3)
   middleman-autoprefixer (~> 2.7)
   middleman-sprockets (~> 4.1)
